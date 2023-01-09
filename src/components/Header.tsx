@@ -1,21 +1,14 @@
 import Image from 'next/image'
 
 import logo from '../../public/logo.webp'
-import Vinyl from '../../public/vinyl.svg'
-import close from '../../public/close.svg'
-
-import youtube from '../../public/youtube.svg'
-import instagram from '../../public/instagram.svg'
-import spotify from '../../public/spotify.svg'
-import apple from '../../public/apple.svg'
 
 const Header: React.FC = () => {
     return (
         <header className='w-full h-[70px] border-b-2 border-myNeon sticky top-0'>
             <div className='flex w-full h-full relative items-start justify-center overflow-hidden pt-3 pr-6'>
-                <Image src={logo} alt='Sultan Entertainment' className='w-[42px] h-[32px ' />
+                <Image src={logo} alt='Sultan Entertainment' quality={100} className='w-[42px] h-[32px] ' />
                 <h1 className='text-myNeon uppercase font-Syne font-bold text-5xl tracking-tighter pt-2'>aukštas</h1>
-                <Image src={Vinyl} alt='Vinyl' className='absolute top-[-33px] right-[-33px] animate-spin hover:animate-none hover:scale-150'
+                <Image src='/vinyl.svg' alt='Vinyl' width={70} height={70} quality={100} className='absolute top-[-33px] right-[-33px] animate-spin hover:animate-none hover:scale-150'
                 onClick={() => {
                     const navMenu = document.getElementById('nav-menu');
                     navMenu?.classList.toggle('hidden');
@@ -42,15 +35,15 @@ const Header: React.FC = () => {
                         </div>
                     </div>
                     <div className='flex flex-col items-center justify-center gap-6 pr-3 pt-6'>
-                        <Image src={youtube} alt='youtube' />
-                        <Image src={spotify} alt='spotify' />
-                        <Image src={instagram} alt='instagram' />
-                        <Image src={apple} alt='apple' />
+                        <Image src='/youtube.svg' alt='youtube' width={38} height={38} />
+                        <Image src='/spotify.svg' alt='spotify' width={38} height={38} />
+                        <Image src='/instagram.svg' alt='instagram' width={38} height={38} />
+                        <Image src='/apple.svg' alt='apple' width={38} height={38} />
                     </div>
                 </div>
 
 
-                <Image src={close} alt='close' className='absolute top-[-2px] right-[-2px]' onClick={() => {
+                <Image src='/close.svg' width={64} height={64} alt='close' className='absolute top-[-2px] right-[-2px]' onClick={() => {
                     const navMenu = document.getElementById('nav-menu');
                     navMenu?.classList.toggle('hidden');
                 } }/>
