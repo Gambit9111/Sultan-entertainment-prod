@@ -8,7 +8,7 @@ const Header: React.FC = () => {
             <div className='flex w-full h-full relative items-start justify-center overflow-hidden pt-3 pr-6'>
                 <Image src={logo} alt='Sultan Entertainment' quality={100} className='w-[42px] h-[32px] ' />
                 <h1 className='text-myNeon uppercase font-Syne font-bold text-5xl tracking-tighter pt-2'>aukštas</h1>
-                <Image src='/vinyl.svg' alt='Vinyl' width={70} height={70} quality={100} className='absolute top-[-33px] right-[-33px] animate-spin hover:animate-none hover:scale-150'
+                <Image src='/Vinyl.svg' alt='Vinyl' width={70} height={70} quality={100} className='absolute top-[-33px] right-[-33px] animate-spin hover:animate-none hover:scale-150'
                 onClick={() => {
                     const navMenu = document.getElementById('nav-menu');
                     navMenu?.classList.toggle('hidden');
