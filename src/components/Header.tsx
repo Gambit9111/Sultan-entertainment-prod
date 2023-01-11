@@ -4,8 +4,9 @@ import logo from '../../public/logo.webp'
 
 const Header: React.FC = () => {
     return (
-        <header className='w-full h-[70px] border-b-2 border-myNeon sticky top-0 bg-myBlack z-50'>
-            <div className='flex w-full h-full relative items-start justify-center overflow-hidden pt-3 pr-6'>
+        <header className='w-full h-[70px] border-b-2 border-myNeon sticky top-0 bg-myBlack z-50 lg:h-[102px]'>
+            {/* mobile screen */}
+            <div className='flex w-full h-full relative items-start justify-center overflow-hidden pt-3 pr-6 lg:hidden'>
                 <Image src={logo} alt='Sultan Entertainment' quality={100} className='w-[42px] h-[32px] ' />
                 <h1 className='text-myNeon uppercase font-Syne font-bold text-5xl tracking-tighter pt-2'>aukštas</h1>
                 <Image src='/Vinyl.svg' alt='Vinyl' width={70} height={70} quality={100} className='absolute top-[-33px] right-[-33px] animate-spin hover:animate-none hover:scale-150'
@@ -14,8 +15,22 @@ const Header: React.FC = () => {
                     navMenu?.classList.toggle('hidden');
                 }}/>
             </div>
+            
+            {/* dekstop screen */}
+            <div className='hidden lg:inline-flex px-16 w-full h-full items-center justify-between pt-3'>
+                <nav className='text-myWhite uppercase font-Syne text-2xl font-bold flex gap-12'>
+                    <h3>Home</h3>
+                    <h3>Contact</h3>
+                    <h3>Merch</h3>
+                    <h3>Artists</h3>
+                </nav>
+                <div className='flex gap-1'>
+                    <Image src={logo} alt='Sultan Entertainment' quality={100} className='w-[42px] h-[32px] ' />
+                    <h1 className='text-myNeon uppercase font-Syne font-bold text-5xl tracking-tighter pt-2'>aukštas</h1>
+                </div>
+            </div>
 
-            {/* dropdown */}
+            {/* mobile dropdown */}
             <div id="nav-menu" className='hidden absolute top-0 right-0 w-full h-[400px] bg-myBlack border-2 border-myNeon rounded-b-xl'>
 
                 <div className='flex w-full h-full justify-between'>

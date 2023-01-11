@@ -1,10 +1,10 @@
-import { type NextPage } from "next";
+import type { ReactElement } from 'react'
+import type { NextPageWithLayout } from './_app'
+import Layout from '../components/layout'
 import Head from "next/head";
 
-import Header from "../components/Header";
-import Hero1 from "../components/Hero1";
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout  = () => {
   return (
     <>
       <Head>
@@ -13,15 +13,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header />
-        
-        <section>
-          <Hero1 />
-        </section>
 
       </main>
     </>
   );
 };
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}
 
 export default Home;
