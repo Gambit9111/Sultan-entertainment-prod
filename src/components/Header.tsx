@@ -4,7 +4,7 @@ import logo from '../../public/logo.webp'
 
 const Header: React.FC = () => {
     return (
-        <header className='w-full h-[70px] border-b-2 border-myNeon sticky top-0'>
+        <header className='w-full h-[70px] border-b-2 border-myNeon sticky top-0 bg-myBlack z-50'>
             <div className='flex w-full h-full relative items-start justify-center overflow-hidden pt-3 pr-6'>
                 <Image src={logo} alt='Sultan Entertainment' quality={100} className='w-[42px] h-[32px] ' />
                 <h1 className='text-myNeon uppercase font-Syne font-bold text-5xl tracking-tighter pt-2'>aukštas</h1>
