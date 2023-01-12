@@ -1,8 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import logo from '../../public/logo.webp'
 
 const Header: React.FC = () => {
+
+
     return (
         <header className='w-full h-[70px] border-b-2 border-myNeon bg-myBlack lg:h-[102px]'>
             {/* mobile screen */}
@@ -15,11 +18,11 @@ const Header: React.FC = () => {
                     navMenu?.classList.toggle('hidden');
                 }}/>
             </div>
-            
+
             {/* dekstop screen */}
             <div className='hidden lg:inline-flex px-16 w-full h-full items-center justify-between pt-3'>
                 <nav className='text-myWhite uppercase font-Syne text-2xl font-bold flex gap-12'>
-                    <h3>Home</h3>
+                    <Link href="/"><h3>Home</h3></Link>
                     <h3>Contact</h3>
                     <h3>Merch</h3>
                     <h3>Artists</h3>
@@ -36,7 +39,10 @@ const Header: React.FC = () => {
                 <div className='flex w-full h-full justify-between'>
                     <div className='pt-8 pl-12 space-y-6'>
                         <nav className='text-myWhite uppercase font-Syne text-2xl font-bold space-y-2'>
-                            <h3>home</h3>
+                        <Link href="/" onClick={() => {
+                            const navMenu = document.getElementById('nav-menu');
+                            navMenu?.classList.toggle('hidden');}}>
+                            <h3>Home</h3></Link>
                             <h3>contact</h3>
                             <h3>merch</h3>
                             <h3>artists</h3>

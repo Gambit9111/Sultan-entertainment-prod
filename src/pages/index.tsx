@@ -2,11 +2,11 @@ import type { ReactElement } from 'react'
 import type { NextPageWithLayout } from './_app'
 import Layout from '../components/layout'
 import Head from "next/head";
-
 import Hero1 from '../components/Hero1'
 
 
 const Home: NextPageWithLayout  = () => {
+
   return (
     <>
       <Head>
