@@ -5,7 +5,7 @@ import heroImage from '../../public/images/hero1.webp'
 
 const Hero1: React.FC = () => {
     return (
-        <div className="w-full h-[800px] overflow-hidden relative">
+        <div className="w-full overflow-hidden relative h-[90vh] lg:h-[80vh]">
 
             {/* mobile screen */}
             <div className='lg:hidden'>
@@ -16,7 +16,7 @@ const Hero1: React.FC = () => {
                         <p className='font-Syne text-xl font-medium text-myNeon'>Explore!</p>
                     </div>
                 </div>
-                <Image src={heroImage} alt='Sultan Entertainment' quality={100} priority className="w-[294px] h-[360px] absolute right-[-20px] bottom-8 rounded-b-[50px]"/>
+                <Image src={heroImage} alt='Sultan Entertainment' quality={100} priority className="w-[294px] h-[360px] absolute right-[-20px] bottom-0 rounded-b-[50px]"/>
             </div>
 
             {/* desktop screen */}

@@ -4,7 +4,7 @@ import logo from '../../public/logo.webp'
 
 const Header: React.FC = () => {
     return (
-        <header className='w-full h-[70px] border-b-2 border-myNeon sticky top-0 bg-myBlack z-50 lg:h-[102px]'>
+        <header className='w-full h-[70px] border-b-2 border-myNeon bg-myBlack lg:h-[102px]'>
             {/* mobile screen */}
             <div className='flex w-full h-full relative items-start justify-center overflow-hidden pt-3 pr-6 lg:hidden'>
                 <Image src={logo} alt='Sultan Entertainment' quality={100} className='w-[42px] h-[32px] ' />
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             </div>
 
             {/* mobile dropdown */}
-            <div id="nav-menu" className='hidden absolute top-0 right-0 w-full h-[400px] bg-myBlack border-2 border-myNeon rounded-b-xl'>
+            <div id="nav-menu" className='z-50 hidden absolute top-0 right-0 w-full h-[400px] bg-myBlack border-2 border-myNeon rounded-b-xl'>
 
                 <div className='flex w-full h-full justify-between'>
                     <div className='pt-8 pl-12 space-y-6'>

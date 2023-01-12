@@ -3,6 +3,8 @@ import type { NextPageWithLayout } from './_app'
 import Layout from '../components/layout'
 import Head from "next/head";
 
+import Hero1 from '../components/Hero1'
+
 
 const Home: NextPageWithLayout  = () => {
   return (
@@ -13,7 +15,7 @@ const Home: NextPageWithLayout  = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
+        <Hero1 />
       </main>
     </>
   );
