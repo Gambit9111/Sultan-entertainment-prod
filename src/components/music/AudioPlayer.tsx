@@ -68,13 +68,13 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
     };
 
     return (
-        <div className='pt-11 lg:pt-24 flex items-center gap-3'>
+        <div className='flex items-center gap-3'>
             <button className='text-myWhite font-Syne' onClick={togglePlay}>
                 {isPlaying ? <Image src={pause} alt="pause" className='w-6 h-6' /> : <Image src={play} alt="play" className='w-6 h-6' />}
             </button>
-            <div className='bg-myNeon rounded-md h-2 w-8/12  relative z-30 mt-4'>
+            <div className='bg-myNeon rounded-md h-2 w-full  relative z-30 mt-4'>
                 <div
-                    className='absolute bottom-[-2px] left-[-2px] w-8/12 h-[7px] rounded-md bg-myBlack z-50'
+                    className='absolute bottom-[-2px] left-[-2px] w-full h-[7px] rounded-md bg-myBlack z-50'
                     style={{ width: `${progress}%` }}
                 />
             </div>

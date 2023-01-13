@@ -9,9 +9,9 @@ import { PageProps } from "../../components/music/AudioTracks";
 const Home: NextPageWithLayout<PageProps> = ({ tracks }) => {
   return (
     <>
-      <main>
+      <main className="w-full h-screen">
         <h1 className="font-Syne text-2xl uppercase text-myWhite font-bold leading-none text-center px-14 mt-9">Newest tracks by our <span className="text-myNeon">artists</span></h1>
-        <AudioTracks tracks={tracks} />
+          <AudioTracks tracks={tracks} />
       </main>
     </>
   );

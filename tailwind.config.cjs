@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         "Syne": ["Syne", ...defaultTheme.fontFamily.sans],
+        "Outfit": ["Outfit", ...defaultTheme.fontFamily.sans],
       },
     },
   },

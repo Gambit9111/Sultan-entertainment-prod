@@ -25,23 +25,21 @@ interface Track {
 
 const AudioTrack: React.FC<Track> = ({ title, artist, audioSrc, image }) => {
   return (
-    <div className="flex h-[125px] w-full gap-3 lg:h-[250px] lg:gap-8">
+    <div className="text-myWhite flex items-center justify-end px-3 gap-3 mt-6 h-[125px]">
       <Image
         src={image}
         alt={title}
         width={127}
         height={125}
-        className="lg:h-[250px] lg:w-[250px]"
+        className="rounded-xl"
       />
-      <div className="w-full pt-1">
-        <h3 className="font-Syne text-sm font-semibold text-myWhite lg:pb-3">
-          {artist}
-        </h3>
-        <h3 className="text-sm font-bold text-myNeon lg:text-2xl">{title}</h3>
-        <p className="hidden text-myWhite lg:inline-flex">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-          tempore!
-        </p>
+      <div className="w-full flex flex-col h-full justify-evenly">
+        <div>
+          <h3 className="font-Syne leading-none font-bold text-myNeon">
+            {artist}
+          </h3>
+          <h3 className="text-myWhite text-sm font-Outfit tracking-wider font-semibold">{title}</h3>
+        </div>
         <AudioPlayer audioSrc={audioSrc} />
       </div>
     </div>
@@ -53,32 +51,40 @@ const AudioTracks: React.FC<PageProps> = ({ tracks }) => {
   return (
     <div>
       <div>
-        <div>
-          <button className="text-myNeon" onClick={() => setArtist("Bienis")}>
-            Bienis
-          </button>
-          <button className="text-myNeon" onClick={() => setArtist("Mamis")}>
-            Mamis
-          </button>
-          <button className="text-myNeon" onClick={() => setArtist("Muile")}>
-            Muile
-          </button>
-          <button
-            className="text-myNeon"
-            onClick={() => setArtist("Prosto Pijus")}
-          >
-            Prosto Pijus
-          </button>
-          <button className="text-myNeon" onClick={() => setArtist("Seneka")}>
-            Seneka
-          </button>
-          <button
-            className="my-button border border-myNeon bg-myBlack text-myNeon"
-            onClick={() => setArtist("")}
-          >
-            View All
-          </button>
+        <div className="flex justify-between px-3 font-Syne text-xs leading-none font-bold text-myNeon pt-6">
+
+          <div className="flex flex-col items-center gap-2">
+            <button className="w-14 h-14 bg-[#89fc00] rounded-xl" onClick={() => setArtist("Mamis")}>
+            </button>
+            <h3>Mamis</h3>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <button className="w-14 h-14 bg-[#dc0073] rounded-xl" onClick={() => setArtist("Bienis")}>
+            </button>
+            <h3>Bienis</h3>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <button className="w-14 h-14 bg-[#00a1e4] rounded-xl" onClick={() => setArtist("Seneka")}>
+            </button>
+            <h3>Seneka</h3>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <button className="w-14 h-14 bg-[#f5b700] rounded-xl" onClick={() => setArtist("Prosto Pijus")}>
+            </button>
+            <h3>Pijus</h3>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <button className="w-14 h-14 bg-[#04e762] rounded-xl" onClick={() => setArtist("Muile")}>
+            </button>
+            <h3>Muile</h3>
+          </div>
+
         </div>
+
         <div>
           {/* <SectionTrack />
                     <SectionTrack />
@@ -90,6 +96,7 @@ const AudioTracks: React.FC<PageProps> = ({ tracks }) => {
               <AudioTrack key={track.id} {...track} />
             ))}
         </div>
+
       </div>
     </div>
   );
