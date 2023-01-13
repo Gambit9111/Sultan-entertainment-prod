@@ -41,6 +41,19 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
         };
     }, [audio]);
 
+    useEffect( () => {
+        audio.addEventListener('pause', () => {
+            setIsPlaying(false);
+        }
+        );
+        return () => {
+            audio.removeEventListener('pause', () => {
+                setIsPlaying(false);
+            }
+            );
+        };
+    }, [audio]);
+
     const togglePlay = () => {
         if (currentlyPlaying) {
             currentlyPlaying.pause();

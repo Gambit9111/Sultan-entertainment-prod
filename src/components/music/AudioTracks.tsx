@@ -51,13 +51,9 @@ const AudioTrack: React.FC<Track> = ({ title, artist, audioSrc, image }) => {
 const AudioTracks: React.FC<PageProps> = ({ tracks }) => {
   const [artist, setArtist] = useState("");
   return (
-    <div className="mt-16 lg:mt-56">
-      <h3 className="pb-6 text-center font-semibold text-myWhite">Songs</h3>
-      <h1 className="px-1 pb-6 text-center font-Syne text-[56px] font-bold leading-[67px] text-myNeon">
-        Newest tracks by our artists
-      </h1>
+    <div>
       <div>
-        <div className="grid grid-cols-3 grid-rows-2 gap-2 pb-10 lg:flex lg:justify-center lg:gap-5 lg:pt-8 lg:pb-12">
+        <div>
           <button className="text-myNeon" onClick={() => setArtist("Bienis")}>
             Bienis
           </button>
@@ -83,7 +79,7 @@ const AudioTracks: React.FC<PageProps> = ({ tracks }) => {
             View All
           </button>
         </div>
-        <div className="flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-14">
+        <div>
           {/* <SectionTrack />
                     <SectionTrack />
                     <SectionTrack />
